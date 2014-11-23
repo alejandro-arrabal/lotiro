@@ -1,0 +1,6 @@
+estoy_app:
+    resource: "@EstoyAppBundle/Resources/config/routing.yml"
+    prefix:   /
+payment_controller:
+    resource: "@EstoyAppBundle/Controller/PaymentController.php"
+    type:     annotation

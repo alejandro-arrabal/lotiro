@@ -1,0 +1,3 @@
+estoy_app_homepage:
+    resource: "@EstoyAppBundle/Controller/DefaultController.php"
+    type:     annotation
