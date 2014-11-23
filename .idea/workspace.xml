@@ -70,8 +70,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Estoy/AppBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45819935" vertical-offset="1110" max-vertical-offset="3300">
-              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.31350482" vertical-offset="1110" max-vertical-offset="3210">
+              <caret line="87" column="331" selection-start-line="87" selection-start-column="331" selection-end-line="87" selection-end-column="331" />
               <folding />
             </state>
           </provider>
@@ -877,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Estoy/AppBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45819935" vertical-offset="1110" max-vertical-offset="3300">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.31350482" vertical-offset="1110" max-vertical-offset="3210">
+          <caret line="87" column="331" selection-start-line="87" selection-start-column="331" selection-end-line="87" selection-end-column="331" />
           <folding />
         </state>
       </provider>

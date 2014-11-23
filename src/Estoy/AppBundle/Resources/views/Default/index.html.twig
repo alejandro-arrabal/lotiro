@@ -85,13 +85,7 @@
         {% for event in events %}
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail oferta" id="oferta1">
-                    <img src="
-                {% if evento.tipo=="ticket tren" %}{{ asset('img/tike2.png') }}{% endif %}
-                {% if evento.tipo=="entrada concierto" %}{{ asset('img/tike5.jpg') }}{% endif %}
-                {% if evento.tipo=="entrada de teatro" %}{{ asset('img/tike1.png') }}{% endif %}
-                {% if evento.tipo=="otro" %}{{ asset('img/tike3.png') }}{% endif %}
-
-                " alt="">
+                    <img src="{% if evento.tipo=="ticket tren" %}{{ asset('img/tike2.png') }}{% endif %}{% if evento.tipo=="entrada concierto" %}{{ asset('img/tike5.jpg') }}{% endif %}{% if evento.tipo=="entrada de teatro" %}{{ asset('img/tike1.png') }}{% endif %}{% if evento.tipo=="otro" %}{{ asset('img/tike3.png') }}{% endif %}" alt="">
                     <div class="caption">
                         <h3>{{ event.titulo }}</h3>
                         <p>{{ event.localizacion}} {{ event.fechafin|date('d/m/y') }} </p>
