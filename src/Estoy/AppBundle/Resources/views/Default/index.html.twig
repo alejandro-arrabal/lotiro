@@ -82,33 +82,39 @@
 
     <!-- Page Features -->
     <div class="row text-center">
-{% for event in events %}
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail oferta" id="oferta1">
-                <img src="{{ asset('img/malulotiro.jpg') }}" alt="">
-                <div class="caption">
-                    <h3>{{ event.titulo }}</h3>
-                    <p>{{ event.localizacion}} {{ event.fechafin|date('d/m/y') }} </p>
-                    <p>{{ event.fechafin|date('h:i') }} Horas</p>
-                    <p>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="G3KN8W4A3WB7J">
-                        <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
-                    </form>
-                    <p id="reloj{{ loop.index }}" class="reloj" data-pricemin="{{ event.preciominimo }}" data-price="{{ event.precioinicial }}" data-discount="2" data-interval="01/01/1971 01:00" data-start="{{ event.createdat|date('m/d/y H:i:s') }}" data-end="{{ event.fechafin|date('m/d/y H:i:s') }}"></p>
-                    <p>precio inicial {{ event.precioinicial }}€</p>
-                    <p>precio minimo {{ event.precioinicial }}</p>
-                    <p>descuento de 2€ cada hora</p>
-                    <p class="currentPrice"></p>
-                    <p class="reloj{{ loop.index }}"></p>
+        {% for event in events %}
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail oferta" id="oferta1">
+                    <img src="
+                {% if evento.tipo=="ticket tren" %}{{ asset('img/tike2.png') }}{% endif %}
+                {% if evento.tipo=="entrada concierto" %}{{ asset('img/tike5.jpg') }}{% endif %}
+                {% if evento.tipo=="entrada de teatro" %}{{ asset('img/tike1.png') }}{% endif %}
+                {% if evento.tipo=="otro" %}{{ asset('img/tike3.png') }}{% endif %}
 
-                    </p>
+                " alt="">
+                    <div class="caption">
+                        <h3>{{ event.titulo }}</h3>
+                        <p>{{ event.localizacion}} {{ event.fechafin|date('d/m/y') }} </p>
+                        <p>{{ event.fechafin|date('h:i') }} Horas</p>
+                        <p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="G3KN8W4A3WB7J">
+                            <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                        <p id="reloj{{ loop.index }}" class="reloj" data-pricemin="{{ event.preciominimo }}" data-price="{{ event.precioinicial }}" data-discount="2" data-interval="01/01/1971 01:00" data-start="{{ event.createdat|date('m/d/y H:i:s') }}" data-end="{{ event.fechafin|date('m/d/y H:i:s') }}"></p>
+                        <p>precio inicial {{ event.precioinicial }}€</p>
+                        <p>precio minimo {{ event.precioinicial }}</p>
+                        <p>descuento de 2€ cada hora</p>
+                        <p class="currentPrice"></p>
+                        <p class="reloj{{ loop.index }}"></p>
+
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-{% endfor %}
+        {% endfor %}
 
 
 
@@ -191,16 +197,16 @@
             }
     );
     /*$('#pay').click(function()
-    {
-        price=calculatePrice($(this).parent().children('#reloj'));
-                $.ajax({
-            url: "{{ path('panel_paypal') }}",
-            data:{'amount':20}
+     {
+     price=calculatePrice($(this).parent().children('#reloj'));
+     $.ajax({
+     url: "{{ path('panel_paypal') }}",
+     data:{'amount':20}
 
-        }).done(function(textresponse) {
-                    $('.jumbotron').html(textresponse);
-        });
-    });*/
+     }).done(function(textresponse) {
+     $('.jumbotron').html(textresponse);
+     });
+     });*/
 
 </script>
 </body>
