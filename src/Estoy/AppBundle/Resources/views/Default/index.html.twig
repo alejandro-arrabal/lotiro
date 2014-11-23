@@ -45,11 +45,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Conócenos</a>
+                    <a href="{{ path('conocenos') }}">Conócenos</a>
                 </li>
 
                 <li>
-                    <a href="#">Contacto</a>
+                    <a href="{{ path('contacto') }}">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -91,12 +91,12 @@
                     <p>{{ event.localizacion}} {{ event.fechafin|date('d/m/y') }} </p>
                     <p>{{ event.fechafin|date('h:i') }} Horas</p>
                     <p>
-                    <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="G3KN8W4A3WB7J">
                         <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
                         <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
-                    </form>-->
+                    </form>
                     <p id="reloj{{ loop.index }}" class="reloj" data-pricemin="{{ event.preciominimo }}" data-price="{{ event.precioinicial }}" data-discount="2" data-interval="01/01/1971 01:00" data-start="{{ event.createdat|date('m/d/y H:i:s') }}" data-end="{{ event.fechafin|date('m/d/y H:i:s') }}"></p>
                     <p>precio inicial {{ event.precioinicial }}€</p>
                     <p>precio minimo {{ event.precioinicial }}</p>

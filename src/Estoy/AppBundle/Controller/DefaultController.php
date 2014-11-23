@@ -35,7 +35,26 @@ class DefaultController extends Controller
         return $this->render('EstoyAppBundle:Default:index.html.twig',array('form'=>$form,'events'=>$events));
     }
 
-
+    /**
+     * Creates a new Evento entity.
+     *
+     * @Route("/conocenos", name="conocenos")
+     * @Method("GET")
+     */
+    public function conocenosAction()
+    {
+        return $this->render('EstoyAppBundle:Default:conocenos.html.twig');
+    }
+    /**
+     * Creates a new Evento entity.
+     *
+     * @Route("/contacto", name="contacto")
+     * @Method("GET")
+     */
+    public function contactoAction()
+    {
+        return $this->render('EstoyAppBundle:Default:contacto.html.twig');
+    }
     /**
      * Creates a form to create a Evento entity.
      *

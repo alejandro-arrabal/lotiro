@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Heroic Features - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ asset('css/heroic-features.css') }}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+       
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Inicio</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{{ path('conocenos') }}">Conócenos</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ path('contacto') }}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+       
+    </nav> 
+
+    <!-- Page Content -->
+    <div class="container" id="container">
+
+        <!-- Jumbotron Header -->
+        <header class=" jumbotron hero-spacer">
+            <img src="{{ asset('img/banner.jpg') }}" class="img-responsive">
+            <h2>¿Cómo funcionamos?</h2>
+            <h5>Estoyquelotiro es una plataforma que pone en contacto a compradores y vendedores de productos-servicios cuya fecha de caducidad es inferior a 24h.<br><br>
+                 Nuestro sistema se basa en una subasta a la inversa, es decir ,gestionamos el precio del producto-servicio partiendo de un máximo y reduciéndose progresivamente hasta alcanzar un mínimo (ambos valores quedan establecidos por el usuario). <br><br>Con ello, el vendedor facilita al comprador una última oportunidad de compra recuperando la totalidad o parte del dinero invertido.  </h5>
+           
+            </p>
+        </header>
+
+        <hr>
+ 
+        <!-- Title -->
+        <div class="row">
+            <div class="col-md-6" >
+                    <img src="{{ asset('img/alejandro.jpg') }}" class="img-responsive  img-rounded">
+            </div>
+              <div class="col-md-6" > 
+                    <h2>Alejandro Arrabal - Developer</h2>
+               </div>
+        </div>
+        <hr>
+         <div class="row">
+            <div class="col-md-6" >
+                    <img src="{{ asset('img/alberto.jpg') }}" class="img-responsive  img-rounded">
+            </div>
+              <div class="col-md-6" > 
+                    <h2>Alberto Cantón - Developer</h2>
+               </div>
+        </div>
+        <hr>
+         <div class="row">
+            <div class="col-md-6" >
+                    <img src="{{ asset('img/nacho.jpg') }}" class="img-responsive  img-rounded">
+            </div>
+              <div class="col-md-6" > 
+                    <h2>Ignacio Vega - Engineer</h2>
+               </div>
+        </div>
+        <hr>
+          <div class="row">
+            <div class="col-md-6" >
+                    <img src="{{ asset('img/isa.jpg') }}" class="img-responsive img-rounded ">
+            </div>
+              <div class="col-md-6" > 
+                    <h2>Isabel Criado - Business</h2>
+               </div>
+        </div>
+        <hr>
+           <div class="row">
+            <div class="col-md-6" >
+                    <img src="{{ asset('img/mariajose.jpg') }}" class="img-responsive img-rounded ">
+            </div>
+              <div class="col-md-6" > 
+                    <h2>María José Millán - Social Media Manager</h2>
+               </div>
+        </div>
+        <hr>
+           <div class="row">
+            <div class="col-md-6" >
+                    <img src="{{ asset('img/jose.jpg') }}" class="img-responsive  img-rounded">
+            </div>
+              <div class="col-md-6" > 
+                    <h2>Jose Pedro Reina - Graphic Designer</h2>
+               </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+    
+
+        <hr>
+
+        <!-- Footer -->
+           <footer>
+            <div class="row">
+                <div class="col-md-11">
+                    <p>Copyright &copy;2014 EstoyQueLoTiro</p>
+                </div>
+                   <div class="col-md-1">
+                    <img src="{{ asset('img/logoquelotiro.png') }}" class="img-responsive">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- START Modal definition -->
+<div id="howToModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+              <h4 class="modal-title" id="myModalLabel"> Introduzca sus datos</h4>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="correo.php">  
+                        <span>Cuenta de twitter&nbsp;&nbsp;&nbsp; </span><input type="text" required name="cuenta"><br><br>
+                        <span>E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="email"  required name="correo"><br><br>
+                        <input id="price" name="price">
+                        <input id="success" type="submit" class="btn btn-success" >
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div id="modalevento" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only"></span></button>
+              <h4 class="modal-title" id="myModalLabel"> Introduzca los datos del evento</h4>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="php/correoevento.php">  
+                         <span>Nombre &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="text"  required name="nombre"><br><br>
+                          <span>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="email"  required name="email"><br><br>
+                            <span>Teléfono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="text"  required name="telefono"><br><br>
+                        <span>Titulo Evento&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" required name="titulo"><br><br>
+                        <span>Fecha &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="date"  required name="fecha"><br><br>
+                        <span>Localización &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="text"  required name="localizacion"><br><br>
+                        <span>Hora Evento &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="time"  required name="hora"><br><br>
+                         <span>Precio Inicial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="text"  required name="precioinicial"><br><br>
+                          <span>Precio Mínimo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="text"  required name="preciominimo"><br><br>
+                        
+                        <input id="success" type="submit" class="btn btn-success" >
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- END Modal definition -->
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/reloj.js') }}"></script>
+    <script src="{{ asset('js/precios.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+        <script language='JavaScript'>
+                setInterval(function(){
+                    for(var i=1 ;i<=$('.reloj').size(); i++){
+                       muestraReloj(i); 
+                    }
+                }, 1000);
+                $('#success').click(function(){
+                            $(this).parent().children('#price').val();
+                        }
+                );
+
+            </script>
+</body>
+
+</html>
+
